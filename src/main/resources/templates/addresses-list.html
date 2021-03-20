@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" th:replace="~{layout :: layout (~{::main})}" xmlns:th="http://www.thymeleaf.org">
+
+<body>
+    <main role="main">
+        <div class="album py-5 bg-light">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h4>Addresses</h4>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-12" th:if="${addresses.isEmpty()}">
+                        <div class="alert alert-warning" role="alert">
+                            No Addresses defined yet!.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-4" th:each="address : ${addresses}">
+                        <div class="card mb-4">
+                            <div class="card-body">
+                                <div class="card-text">
+                                    First Name : <span th:text="${address.firstName}"></span>
+                                    Last Name : <span th:text="${address.lastName}"></span>
+                                    Street Address : <span th:text="${address.streetAddress}"></span>
+                                    City : <span th:text="${address.city}"></span>
+                                    State Code : <span th:text="${address.stateCode}"></span>
+                                    Zip Code : <span th:text="${address.zipCode}"></span>
+                                    Country : <span th:text="${address.country}"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <a href="#" th:href="@{/actionP/address/step1}"> Add New Address</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
