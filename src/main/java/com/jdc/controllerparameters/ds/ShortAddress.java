@@ -7,9 +7,9 @@ import javax.validation.constraints.Pattern;
 
 @Data
 public class ShortAddress {
-    @NotBlank(message = "Street Address can't be empty")
+    @NotBlank(message = "Street Address can not be empty")
     private String streetAddress;
-    @NotBlank(message = "City name can't be empty")
+    @NotBlank(message = "City name can not be empty")
     private String city;
     @Pattern(regexp = "[A-Z]{2}", message = "State Code needs to be 2 letter code.")
     private String stateCode;

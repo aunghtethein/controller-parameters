@@ -9,7 +9,7 @@
                     <div class="form-row">
                         <div class="form-group col-md-4">
                             <label for="country">Country</label>
-                            <input type="text" th:fields="*{country}" id="country" class="form-control"
+                            <input type="text" th:field="*{country}" id="country" class="form-control"
                                 th:classappend="${#fields.hasErrors('country')} ? 'is-invalid'"/>
                             <div class="invalid-feedback" th:errors="*{country}"></div>
                         </div>

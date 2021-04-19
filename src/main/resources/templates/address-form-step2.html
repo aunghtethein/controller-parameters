@@ -8,7 +8,7 @@
                 <form action="#" th:action="@{/actionP/address/step2}" th:object="${shortAddress}" method="post">
                     <div class="form-group">
                         <label for="streetAddress">Street Address</label>
-                        <input type="text" th:fields="*{streetAddress}" id="streetAddress" class="form-control"
+                        <input type="text" th:field="*{streetAddress}" id="streetAddress" class="form-control"
                             th:classappend="${#fields.hasErrors('streetAddress')} ? 'is-invalid'"/>
                         <div class="invalid-feedback" th:errors="*{streetAddress}"></div>
                     </div>
@@ -16,20 +16,20 @@
                     <div class="form-row">
                         <div class="form-group col-md-4">
                             <label for="city">City</label>
-                            <input type="text" th:fields="*{city}" id="city" class="form-control"
+                            <input type="text" th:field="*{city}" id="city" class="form-control"
                                 th:classappend="${#fields.hasErrors('city')} ? 'is-invalid'"/>
                             <div class="invalid-feedback" th:errors="*{city}"></div>
                         </div>
                         <div class="form-group col-md-2">
                             <label for="stateCode">State Code</label>
-                            <input type="text" th:fields="*{stateCode}" id="stateCode" class="form-control"
+                            <input type="text" th:field="*{stateCode}" id="stateCode" class="form-control"
                                 th:classappend="${#fields.hasErrors('stateCode')} ? 'is-invalid'"/>
                             <div class="invalid-feedback" th:errors="*{stateCode}"></div>
                         </div>
 
                         <div class="form-group col-md-2">
                             <label for="zipCode">Zip Code</label>
-                            <input type="text" th:fields="*{zipCode}" id="zipCode" class="form-control"
+                            <input type="text" th:field="*{zipCode}" id="zipCode" class="form-control"
                                    th:classappend="${#fields.hasErrors('zipCode')} ? 'is-invalid'"/>
                             <div class="invalid-feedback" th:errors="*{zipCode}"></div>
                         </div>
